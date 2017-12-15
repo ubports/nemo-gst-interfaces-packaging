@@ -11,14 +11,14 @@ Homepage: https://git.merproject.org/mer-core/nemo-gst-interfaces
 #Vcs-Git: git://anonscm.debian.org/collab-maint/nemo-gst-interfaces.git
 #Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/nemo-gst-interfaces.git
 
-Package: nemo-gst-interfaces-dev
+Package: nemo-gstreamer1.0-interfaces
 Section: libdevel
 Architecture: any
 Depends: nemo-gst-interfaces (= ${binary:Version}), ${misc:Depends}
 Description: Nemo mobile GStreamer interfaces
  Nemo mobile GStreamer interfaces
 
-Package: nemo-gst-interfaces
+Package: nemo-gstreamer1.0-interfaces-dev
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Nemo mobile GStreamer interfaces
