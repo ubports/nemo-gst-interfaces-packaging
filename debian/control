@@ -1,15 +1,15 @@
 Source: nemo-gst-interfaces
 Priority: optional
-Maintainer: root <root@unknown>
+Maintainer: Bhushan Shah <bhush94@gmail.com>
 Build-Depends: debhelper (>=9),
-	       dh-autoreconf,
+               dh-autoreconf,
                libgstreamer1.0-dev,
-	       libgstreamer-plugins-base1.0-dev
-Standards-Version: 3.9.6
+               libgstreamer-plugins-base1.0-dev
+Standards-Version: 4.1.1
 Section: libs
 Homepage: https://git.merproject.org/mer-core/nemo-gst-interfaces
-#Vcs-Git: git://anonscm.debian.org/collab-maint/nemo-gst-interfaces.git
-#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/nemo-gst-interfaces.git
+Vcs-Git: https://github.com/halium-packaging/nemo-gst-interfaces.git
+Vcs-Browser: https://github.com/halium-packaging/nemo-gst-interfaces
 
 Package: nemo-gstreamer1.0-interfaces-dev
 Section: libdevel
