@@ -1,3 +1,9 @@
+nemo-gst-interfaces (0.20150126.0-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Jonah Brüchert <jbb@kaidan.im>  Thu, 07 Jun 2018 16:49:28 +0200
+
 nemo-gst-interfaces (1.0-1) unstable; urgency=medium
 
   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
