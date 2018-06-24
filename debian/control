@@ -3,8 +3,8 @@ Priority: optional
 Maintainer: Bhushan Shah <bhush94@gmail.com>
 Build-Depends: debhelper (>= 11),
                dh-autoreconf,
-               libgstreamer1.0-dev,
-               libgstreamer-plugins-base1.0-dev
+               libgstreamer-plugins-base1.0-dev,
+               libgstreamer1.0-dev
 Standards-Version: 4.1.4
 Section: libs
 Homepage: https://git.merproject.org/mer-core/nemo-gst-interfaces
@@ -20,6 +20,6 @@ Description: Nemo mobile GStreamer interfaces
 
 Package: nemo-gstreamer1.0-interfaces
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Nemo mobile GStreamer interfaces
  Nemo mobile GStreamer interfaces
