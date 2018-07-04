@@ -2,7 +2,6 @@ Source: nemo-gst-interfaces
 Priority: optional
 Maintainer: Bhushan Shah <bhush94@gmail.com>
 Build-Depends: debhelper (>= 11),
-               dh-autoreconf,
                libgstreamer-plugins-base1.0-dev,
                libgstreamer1.0-dev
 Standards-Version: 4.1.4
