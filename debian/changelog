@@ -1,4 +1,10 @@
-nemo-gst-interfaces (0.20150126.0-1) UNRELEASED; urgency=medium
+nemo-gst-interfaces (0.20150126.0-3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Ratchanan Srirattanamet <peathot@hotmail.com>  Fri, 23 Aug 2019 01:24:21 +0700
+
+nemo-gst-interfaces (0.20150126.0-1) unstable; urgency=medium
 
   * New upstream release
 
