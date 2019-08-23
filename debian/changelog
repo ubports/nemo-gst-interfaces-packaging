@@ -1,8 +1,12 @@
-nemo-gst-interfaces (0.20150126.0-3-1~ubports16.04.1) UNRELEASED; urgency=medium
+nemo-gst-interfaces (0.20150126.0-3-1~ubports16.04.1) xenial; urgency=medium
 
-  * 
+  * Import to UBports
+  * Backport to xenial
+    - Reduce debhelper compatibility to 9
+    - Bring back dh_autoreconf build-dep because it's not automatically
+      included in debhelper 9.
 
- -- Ratchanan Srirattanamet <peathot@hotmail.com>  Fri, 23 Aug 2019 14:43:55 +0700
+ -- Ratchanan Srirattanamet <peathot@hotmail.com>  Fri, 23 Aug 2019 23:57:46 +0700
 
 nemo-gst-interfaces (0.20150126.0-3-1) unstable; urgency=medium
 
