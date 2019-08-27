@@ -1,3 +1,10 @@
+nemo-gst-interfaces (0.20150126.0-3-1~ubports16.04.2) xenial; urgency=medium
+
+  * d/patches/0001-implement-meta-transform-function.patch
+    - nemometa: implement meta_transform function
+
+ -- Ratchanan Srirattanamet <peathot@hotmail.com>  Wed, 28 Aug 2019 00:50:21 +0700
+
 nemo-gst-interfaces (0.20150126.0-3-1~ubports16.04.1) xenial; urgency=medium
 
   * Import to UBports

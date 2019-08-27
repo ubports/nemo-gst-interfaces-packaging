@@ -1,0 +1,58 @@
+Description: nemometa: implement meta_transform function
+ Some element (such as those derived from gstbasetransform) will call the
+ meta_transform function to copy/transform buffer metadata into the new
+ buffer. Without this function implemented, the application will crash
+ as the call is done without checking if the meta implementation
+ implement this function.
+ .
+ I'm not sure if all meta implementations are expected to implement it or
+ not, but as this function is easy to implement in our case, we can just
+ implement it.
+Author: Ratchanan Srirattanamet <peathot@hotmail.com>
+Forwarded: https://git.sailfishos.org/mer-core/nemo-gst-interfaces/merge_requests/3
+Last-Update: 2019-08-28
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: nemo-gst-interfaces/gst-libs/gst/meta/nemometa.c
+===================================================================
+--- nemo-gst-interfaces.orig/gst-libs/gst/meta/nemometa.c
++++ nemo-gst-interfaces/gst-libs/gst/meta/nemometa.c
+@@ -19,6 +19,10 @@
+ #include "nemometa.h"
+ #include <gst/video/video.h>
+ 
++static gboolean
++nemo_gst_buffer_orientation_meta_transform (GstBuffer * dest, GstMeta * meta,
++    GstBuffer * buffer, GQuark type, gpointer data);
++
+ GType
+ nemo_gst_buffer_orientation_meta_api_get_type (void)
+ {
+@@ -46,7 +50,7 @@ nemo_gst_buffer_orientation_meta_get_inf
+ 			 sizeof (NemoGstBufferOrientationMeta),
+ 			 (GstMetaInitFunction) NULL,
+ 			 (GstMetaFreeFunction) NULL,
+-			 (GstMetaTransformFunction)NULL);
++			 nemo_gst_buffer_orientation_meta_transform);
+ 
+     g_once_init_leave (&meta_info, meta);
+   }
+@@ -66,3 +70,18 @@ gst_buffer_add_gst_buffer_orientation_me
+ 
+   return meta;
+ }
++
++static gboolean
++nemo_gst_buffer_orientation_meta_transform (GstBuffer * dest, GstMeta * meta,
++    GstBuffer * buffer, GQuark type, gpointer data)
++{
++  NemoGstBufferOrientationMeta *smeta = (NemoGstBufferOrientationMeta *) meta;
++
++  // This meta is about how the buffer is created. So, `type` doesn't matter.
++  if (!gst_buffer_add_gst_buffer_orientation_meta (dest, smeta->orientation,
++          smeta->direction)) {
++    return FALSE;
++  }
++
++  return TRUE;
++}
