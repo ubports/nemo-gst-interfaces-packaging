@@ -1,3 +1,9 @@
+nemo-gst-interfaces (0.20150126.0-3-1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+
+ -- Jonah Brüchert <jbb@kaidan.im>  Sun, 06 Oct 2019 16:31:21 +0200
+
 nemo-gst-interfaces (0.20150126.0-3-1) unstable; urgency=medium
 
   * New upstream release.
