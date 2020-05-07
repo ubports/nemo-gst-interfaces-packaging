@@ -1,3 +1,11 @@
+nemo-gst-interfaces (0.20200421.0-1) unstable; urgency=medium
+
+  * New upstream release. Changes since the last update includes:
+    - Avoid warning in initialization.
+    - Add a memory type abstracting EGL images.
+
+ -- Ratchanan Srirattanamet <ratchanan@ubports.com>  Fri, 08 May 2020 02:04:50 +0700
+
 nemo-gst-interfaces (0.20191010.0-1) unstable; urgency=medium
 
   * New upstream release.
