@@ -1,3 +1,12 @@
+nemo-gst-interfaces (0.20200421.0-1~ubports16.04.1) xenial; urgency=medium
+
+  * Merge version 0.20200421.0-1 from Debian-PM
+  * Update source location for 0.20200421.0
+  * Remove 0001-implement-meta-transform-function.patch, applied upstream
+    - As this is the only patch, also remove the series file.
+
+ -- Ratchanan Srirattanamet <ratchanan@ubports.com>  Tue, 09 Jun 2020 00:40:53 +0700
+
 nemo-gst-interfaces (0.20200421.0-1) unstable; urgency=medium
 
   * New upstream release. Changes since the last update includes:
